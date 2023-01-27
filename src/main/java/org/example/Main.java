@@ -4,19 +4,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 class CreditCard implements Cloneable {
     private static final Logger LOGGER = Logger.getLogger("InfoLogging");
-    private String CardHolder;
-    private long CardNumber;
-    private String ExpiaryDate;
+    private String cardHolder;
+    private long cardNumber;
+    private String expiaryDate;
 
     CreditCard(String cd, long cn, String ed) {
-        CardHolder = cd;
-        CardNumber = cn;
-        ExpiaryDate = ed;
+        cardHolder = cd;
+        cardNumber = cn;
+        expiaryDate = ed;
     }
 
     public boolean eql(long cardnumber) {
         boolean check = false;
-        if (CardNumber == cardnumber) {
+        if (cardNumber == cardnumber) {
             check = true;
         }
         return check;
@@ -37,8 +37,8 @@ class CreditCard implements Cloneable {
         CreditCard p = new CreditCard(name, cdnumber, expDate);
         CreditCard p1 = p.copy();
         LOGGER.info("Enter the New Card Number");
-        p1.CardNumber = sc.nextLong();
-        boolean conf = p.eql(p1.CardNumber);
+        p1.cardNumber = sc.nextLong();
+        boolean conf = p.eql(p1.cardNumber);
         if (conf) {
             LOGGER.info("True! They are same as Original Details ");
         } else {
@@ -46,7 +46,7 @@ class CreditCard implements Cloneable {
             LOGGER.info("Want to see the New DebitCard Details with the Original Details\n1.yes\n2.No");
             int op=sc.nextInt();
             if(op==1){
-                dumy = "The New Credit Card with Details is \nName of the holder" + p.CardHolder + "\n CardNumber" + p.CardNumber + "\n Expiary Date" + p.ExpiaryDate;
+                dumy = "The New Credit Card with Details is \nName of the holder" + p.cardHolder + "\n CardNumber" + p.cardNumber + "\n Expiary Date" + p.expiaryDate;
                 LOGGER.info(dumy);
             }
             else if(op==2) {
