@@ -46,7 +46,7 @@ class CreditCard implements Cloneable {
             LOGGER.info("Want to see the New DebitCard Details with the Original Details\n1.yes\n2.No");
             int op=sc.nextInt();
             if(op==1){
-                dumy = "The New Credit Card with Details is \nName of the holder" + p.cardHolder + "\n CardNumber" + p.cardNumber + "\n Expiary Date" + p.expiaryDate;
+                dumy = "The New Credit Card with Details is \nName of the holder " + p.cardHolder + "\n CardNumber " + p.cardNumber + "\n Expiary Date " + p.expiaryDate;
                 LOGGER.info(dumy);
             }
             else if(op==2) {
