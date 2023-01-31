@@ -27,7 +27,7 @@ class CreditCard implements Cloneable {
     }
 
     public static void main(String[] args) throws CloneNotSupportedException {
-        try {
+
             Scanner sc = new Scanner(System.in);
             String dumy = "";
             LOGGER.log(Level.INFO, "Enter the CardHolder Name");
@@ -57,8 +57,5 @@ class CreditCard implements Cloneable {
                     LOGGER.info("Something Went Wrong");
                 }
             }
-        } catch (Exception e) {
-            LOGGER.info("Something went wrong while giving input");
-        }
     }
 }
