@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-public class CreditCard implements Cloneable {
+class CreditCard implements Cloneable {
     private static final Logger LOGGER = Logger.getLogger("InfoLogging");
     private String cardHolder;
     private long cardNumber;
